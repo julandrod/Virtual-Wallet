@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import startDb from "./db/index.js";
 
 const app = express();
 dotenv.config();
@@ -11,6 +12,7 @@ app.get("/", (req, res) => {
 });
 
 const startApi = () => {
+  startDb();
   app.listen(port, () => console.log(`Server is listening on port ${port}`));
 };
 
