@@ -16,7 +16,6 @@ const createNewTransaction = async (info) => {
 
     return transaction;
   } catch (error) {
-    console.log(error);
     throw new ErrorObject(error);
   }
 };

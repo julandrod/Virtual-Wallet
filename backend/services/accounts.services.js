@@ -141,7 +141,6 @@ const chargeAccount = async (destinationId, originAccount, info) => {
 
     return transaction;
   } catch (error) {
-    console.log(error);
     throw new ErrorObject(error);
   }
 };
